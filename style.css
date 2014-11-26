@@ -23,3 +23,18 @@ header {
 	vertical-align: bottom;
 	box-shadow: 10px 10px 50px black;
 }
+
+#nav ul li {
+	list-style: none;
+	display: inline;
+	padding: 5px;
+	margin: 5px;
+	border: 2px solid red;
+	border-radius: 5px;
+}
+
+#nav {
+	position: fixed;
+	display: block;
+	left: 50%;
+}
