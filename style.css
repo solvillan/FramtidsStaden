@@ -1,0 +1,25 @@
+body {
+	margin: 0px;
+	padding: 0px;
+}
+header {
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	background-image: url("http://gfx.aftonbladet-cdn.se/image/16355653/733/normal/0da5810314fcb/chicago01.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	padding: 20px;
+	display: block;
+}
+
+.h1 {
+	background-color: #cecece;
+	font-size: 48px;
+	padding: 5px;
+	margin: 5px;
+	border-right: 5px solid red;
+	vertical-align: bottom;
+	box-shadow: 10px 10px 50px black;
+}
