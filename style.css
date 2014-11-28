@@ -2,26 +2,25 @@ body {
 	margin: 0px;
 	padding: 0px;
 }
-header {
-	margin-top: 0px;
-	margin-left: 0px;
-	margin-right: 0px;
-	background-image: url("http://gfx.aftonbladet-cdn.se/image/16355653/733/normal/0da5810314fcb/chicago01.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
+#head {
+	background-image: url("http://cdn.frontpagemag.com/wp-content/uploads/2013/07/New-York-City-Skyline.jpg");
+	margin: 0px;
 	padding: 20px;
-	display: block;
+	padding-top: 20px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-origin: border-box;
+	box-shadow: 0px 8px 50px #000;
 }
 
 .h1 {
-	background-color: #cecece;
+	background-color: white;
 	font-size: 48px;
 	padding: 5px;
 	margin: 5px;
 	border-right: 5px solid red;
 	vertical-align: bottom;
-	box-shadow: 10px 10px 50px black;
+	box-shadow: 0px 8px 50px #000;
 }
 
 #nav ul li {
@@ -31,10 +30,29 @@ header {
 	margin: 5px;
 	border: 2px solid red;
 	border-radius: 5px;
+	background-color: #fff;
+	box-shadow: 0px 2px 12.5px #000;
+}
+
+#nav ul li:hover {
+	background-color: #eeeeee;
+	cursor: pointer;
 }
 
 #nav {
 	position: fixed;
 	display: block;
-	left: 50%;
+	width: 100%;
+	top: 150px;
+	z-index: 50;
+	background-color: white;
+	box-shadow: 0px 8px 50px #000;
+}
+
+#spec {
+	display: none;
+}
+
+#omProj {
+	display: none;
 }
