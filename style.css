@@ -1,7 +1,15 @@
+/*	Colors:
+	Details: 	227, 68, 0
+	Background:	255, 255, 255
+	Hover:		#EEEEEE
+*/
+
 body {
 	margin: 0px;
 	padding: 0px;
+	font-family: 'Open Sans', sans-serif;
 }
+
 #head {
 	background-image: url("http://cdn.frontpagemag.com/wp-content/uploads/2013/07/New-York-City-Skyline.jpg");
 	margin: 0px;
@@ -9,8 +17,23 @@ body {
 	padding-top: 20px;
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: 50% 50%;
 	background-origin: border-box;
 	box-shadow: 0px 8px 50px #000;
+}
+
+#openBtn {
+	border: 2px solid white;
+	border-radius: 5px;
+	background-color: rgba(127, 127, 127, 0.4);
+	padding: 5px;
+	font-size: 36px;
+	color: white;
+	font-weight: bold;
+}
+
+#openBtn:hover {
+	cursor: pointer;
 }
 
 .h1 {
@@ -18,20 +41,33 @@ body {
 	font-size: 48px;
 	padding: 5px;
 	margin: 5px;
-	border-right: 5px solid red;
+	border-right: 5px solid rgb(227, 68, 0);
 	vertical-align: bottom;
 	box-shadow: 0px 8px 50px #000;
+}
+
+#nav ul {
+	padding: 0px;
+	margin: 5px;
+	margin-bottom: 9px;
 }
 
 #nav ul li {
 	list-style: none;
 	display: inline;
 	padding: 5px;
-	margin: 5px;
-	border: 2px solid red;
+	margin: 0px;
+	/*border: 2px solid red;
 	border-radius: 5px;
 	background-color: #fff;
-	box-shadow: 0px 2px 12.5px #000;
+	box-shadow: 0px 2px 12.5px #000;*/
+}
+
+#selBar {
+	position: fixed;
+	width: 50px;
+	height: 4px;
+	background-color: rgb(227, 68, 0);
 }
 
 #nav ul li:hover {
@@ -42,11 +78,21 @@ body {
 #nav {
 	position: fixed;
 	display: block;
+	padding: 0px;
 	width: 100%;
 	top: 150px;
 	z-index: 50;
 	background-color: white;
 	box-shadow: 0px 8px 50px #000;
+}
+
+#content {
+	padding: 20px;
+}
+
+.image {
+	border: 2px solid rgb(227, 68, 0);
+	border-radius: 5px;
 }
 
 #spec {
@@ -55,4 +101,8 @@ body {
 
 #omProj {
 	display: none;
+}
+
+.portratt {
+	width: 100%;
 }
