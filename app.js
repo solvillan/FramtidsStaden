@@ -10,26 +10,25 @@ jQuery.fn.center = function () {
 };
 
 placeNavBar = function() {
-  var pos = 0;
-  if ($('#head').innerHeight() - $(window).scrollTop() >= 0) {
-    pos = $('#head').innerHeight() - $(window).scrollTop();
-  } else {
-    pos = 0;
-  }
-  $('#nav').css('top', pos+'px');
-  $('#selBar').css('top', (pos+$('#nav').outerHeight()-4)+'px');
+    var pos = 0;
+    if ($('#head').innerHeight() - $(window).scrollTop() >= 0) {
+        pos = $('#head').innerHeight() - $(window).scrollTop();
+    } else {
+        pos = 0;
+    }
+    $('#nav').css('top', pos+'px');
+    $('#selBar').css('top', (pos+$('#nav').outerHeight()-4)+'px');
 };
 
 $(document).ready(function() {
 	//$('#navContent').center();
-    oldHead = $('#head').innerHeight();
+    oldHead = $('#head').innerHeight()-50;
     $('#head').css('height', $(window).outerHeight());
+    $('#imgBg').css('height', $(window).outerHeight());
 
-    oldTitle = $('#title').position();
-    oldSlogan = $('#slogan').position();
+    oldTitle = $('#titleBar').position();
 
-    $('#title').center().css('top', $(window).outerHeight()/5);
-    $('#slogan').center().css('top', $(window).outerHeight()/5+$('#title').outerHeight());
+    $('#titleBar').center().css('top', $(window).outerHeight()/5);
 
     $('#openBtn').center().css('top', $(window).outerHeight() - $('#openBtn').outerHeight() - 50);
 	$(currentActive+'Btn').css('border-width', '4px');
@@ -45,11 +44,15 @@ $(window).scroll(function() {
 
 $('#openBtn').click(function() {
     $('#openBtn').hide();
-    $('#slogan').animate(oldSlogan, 125);
-    $('#title').animate(oldTitle, 125, function() {
-        $('#head').animate({'height':oldHead}, 175, 'linear', function() {
-            placeNavBar();
-            $('body').css('overflow', 'auto');
+    $('#titleBar').animate(oldTitle, 150, function() {
+        $('#imgBg').show();
+        $('#imgBg').animate({'opacity':1}, 250, function() {
+            $('#vidBg').hide();
+            $('#imgBg').animate({'height':oldHead+20}, 250, 'linear');
+            $('#head').animate({'height':oldHead+20}, 250, 'linear', function() {
+                placeNavBar();
+                $('body').css('overflow', 'auto');
+            });
         });
     });
 });

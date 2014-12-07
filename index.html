@@ -9,8 +9,14 @@
 
 	<body>
 		<header id="head">
-			<a id="title" class="h1">NoName</a><br>
-			<a id="slogan" class="h1">Framtiden runt hörnet</a>
+			<div id="imgBg">&nbsp;</div>
+			<div id="vidBg"
+				data-vide-bg="mp4: vid.mp4, webm: video.webm, poster: http://cdn.frontpagemag.com/wp-content/uploads/2013/07/New-York-City-Skyline.jpg" data-vide-options="posterType: jpg, loop: true, muted: true">
+			</div>
+			<section id="titleBar">
+				<a id="title" class="h1">NoName</a><br>
+				<a id="slogan" class="h1">Framtiden runt hörnet</a>
+			</section>
 			<a id="openBtn">Gå vidare</a>
 		</header>
 
@@ -99,6 +105,7 @@
 
 		<!-- Scripts -->
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="https://raw.githubusercontent.com/VodkaBears/Vide/master/dist/jquery.vide.min.js"></script>
 		<script src="app.js"></script>
 	</body>
 </html>
