@@ -1,15 +1,14 @@
 var currentActive = '#staden';
 var oldHead = 0;
 var oldTitle = {};
-var oldSlogan = {};
 
 jQuery.fn.center = function () {
     this.css("position","absolute");
-    this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + $(window).scrollLeft()) + "px");
+    this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + $(window).scrollLeft()));
     return this;
 };
 
-placeNavBar = function() {
+function placeNavBar() {
     var pos = 0;
     if ($('#head').innerHeight() - $(window).scrollTop() >= 0) {
         pos = $('#head').innerHeight() - $(window).scrollTop();
@@ -17,8 +16,8 @@ placeNavBar = function() {
         pos = 0;
     }
     $('#nav').css('top', pos+'px');
-    $('#selBar').css('top', (pos+$('#nav').outerHeight()-4)+'px');
-};
+    $('#selBar').css('top', (pos+$('#nav').outerHeight()-4));
+}
 
 $(document).ready(function() {
 	//$('#navContent').center();
@@ -31,9 +30,8 @@ $(document).ready(function() {
     $('#titleBar').center().css('top', $(window).outerHeight()/5);
 
     $('#openBtn').center().css('top', $(window).outerHeight() - $('#openBtn').outerHeight() - 50);
-	$(currentActive+'Btn').css('border-width', '4px');
 	placeNavBar();
-	$('#content').css('margin-top', $('#nav').outerHeight() + 5 + 'px');
+	$('#content').css('margin-top', $('#nav').outerHeight() + 5);
 	$('#selBar').css({'left':$(currentActive+'Btn').offset().left, 'width':$(currentActive+'Btn').outerWidth()});
     $('body').css('overflow', 'hidden');
 });
@@ -58,7 +56,7 @@ $('#openBtn').click(function() {
 });
 
 $('#stadenBtn').click(function() {
-	old = currentActive;
+	var old = currentActive;
 	currentActive = '#staden';
 	$('#selBar').animate({'left':$(currentActive+'Btn').offset().left, 'width':$(currentActive+'Btn').outerWidth()}, 250);
 	$(old).fadeOut(125, function() {
@@ -67,7 +65,7 @@ $('#stadenBtn').click(function() {
 });
 
 $('#specBtn').click(function() {
-	old = currentActive;
+	var old = currentActive;
 	currentActive = '#spec';
 	$('#selBar').animate({'left':$(currentActive+'Btn').offset().left, 'width':$(currentActive+'Btn').outerWidth()}, 250);
 	$(old).fadeOut(125, function() {
@@ -76,7 +74,7 @@ $('#specBtn').click(function() {
 });
 
 $('#omProjBtn').click(function() {
-	old = currentActive;
+	var old = currentActive;
 	currentActive = '#omProj';
 	$('#selBar').animate({'left':$(currentActive+'Btn').offset().left, 'width':$(currentActive+'Btn').outerWidth()}, 250);
 	$(old).fadeOut(125, function() {
