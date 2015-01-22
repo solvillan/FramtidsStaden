@@ -10,17 +10,6 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
-#loader {
-	display: block;
-	position: fixed;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	z-index: 99;
-	background-color: white;
-}
-
 #head {
 	/*background-image: url("http://cdn.frontpagemag.com/wp-content/uploads/2013/07/New-York-City-Skyline.jpg");*/
 	margin: 0px;
@@ -105,25 +94,6 @@ body {
 	box-shadow: 0px 2px 12.5px #000;*/
 }
 
-#github {
-    position: fixed;
-    top: 5px;
-    right: 5px;
-	list-style: none;
-	display: inline;
-	margin: 0px;
-	margin-top: -5px;
-	padding: 0px;
-	vertical-align: top;
-}
-
-#github img {
-	padding: 0px;
-	margin: 0px;
-	vertical-align: bottom;
-}
-
-
 #selBar {
 	position: fixed;
 	width: 50px;
@@ -166,14 +136,4 @@ body {
 
 .portratt {
 	width: 100%;
-}
-
-#gitLoad {
-	position: fixed;
-	top: 176px;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
-	background-color: black;
-	display: none;
 }
