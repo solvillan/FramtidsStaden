@@ -167,13 +167,3 @@ body {
 .portratt {
 	width: 100%;
 }
-
-#gitLoad {
-	position: fixed;
-	top: 176px;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
-	background-color: black;
-	display: none;
-}
